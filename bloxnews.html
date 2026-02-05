@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox News & Brainrot Events - Atualizações 2025/2026</title>
+    
+    <!-- Importação de Ícones (FontAwesome) para elementos visuais -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Importação de Fonte (Inter) para leitura moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- Variáveis de Design e Reset --- */
+        :root {
+            --bg-body: #0f0f13;
+            --bg-card: #1c1c24;
+            --bg-card-hover: #252530;
+            --primary: #00b06f; /* Verde estilo Roblox antigo/positivo */
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --text-main: #ffffff;
+            --text-muted: #a1a1aa;
+            --gradient-hero: linear-gradient(135deg, #1c1c24 0%, #0f0f13 100%);
+            --border-radius: 12px;
+            --max-width: 1200px;
+            --spacing-section: 4rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- Tipografia --- */
+        h1, h2, h3 {
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: 2.5rem; letter-spacing: -1px; }
+        h2 { font-size: 2rem; color: var(--text-main); border-left: 5px solid var(--primary); padding-left: 1rem; margin-bottom: 2rem; }
+        h3 { font-size: 1.25rem; color: var(--text-main); }
+        
+        p { margin-bottom: 1rem; color: var(--text-muted); }
+        
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+        /* --- Layout & Container --- */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            padding: var(--spacing-section) 0;
+        }
+
+        /* --- Header / Navegação --- */
+        header {
+            background-color: rgba(15, 15, 19, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo i { color: var(--primary); }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary);
+        }
+
+        /* Mobile Menu Button (Hidden on Desktop) */
+        .mobile-menu-btn { display: none; }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: var(--gradient-hero);
+            padding: 6rem 0 4rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .hero h1 span {
+            background: linear-gradient(to right, var(--primary), var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 1rem auto 2rem;
+            font-size: 1.1rem;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: #000;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        
+        .hero-btn:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(0, 176, 111, 0.4); }
+
+        /* --- Grid de Cards (Atualizações) --- */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background-color: var(--bg-card-hover);
+            border-color: var(--primary);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-blue);
+        }
+
+        .card.date-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255,255,255,0.1);
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .legal-alert {
+            border: 1px solid #ef4444;
+            background: rgba(239, 68, 68, 0.1);
+        }
+        .legal-alert .card-icon { color: #ef4444; }
+
+        /* --- Seção: Como Manter Atualizado --- */
+        .update-guide {
+            background-color: #15151a;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .update-guide-content { flex: 1; }
+        .update-guide-steps { 
+            display: flex; 
+            gap: 1.5rem; 
+            margin-top: 1.5rem; 
+            flex-wrap: wrap; 
+        }
+
+        .step-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .step-item i { color: var(--primary); }
+
+        /* --- Seção Brainrot (Estilo diferente) --- */
+        #brainrot-events {
+            background: linear-gradient(to bottom, var(--bg-body), #1a1025); /* Leve tom roxo */
+        }
+        
+        #brainrot-events h2 { border-left-color: var(--accent-purple); }
+
+        .event-info-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .brainrot-hero {
+            position: relative;
+        }
+        
+        .brainrot-hero img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 2px solid var(--accent-purple);
+        }
+
+        .schedule-box {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+        }
+
+        .schedule-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .schedule-row:last-child { border-bottom: none; }
+        
+        .schedule-day {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent-purple);
+        }
+
+        .sources-list {
+            margin-top: 2rem;
+        }
+        
+        .source-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            background: rgba(255,255,255,0.03);
+            padding: 1rem;
+            border-radius: 8px;
+        }
+        
+        .source-item i { font-size: 1.5rem; }
+        .source-item i.discord { color: #5865F2; }
+        .source-item i.youtube { color: #FF0000; }
+        .source-item i.wiki { color: #facc15; }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #000;
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* --- Responsividade --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .nav-container { flex-direction: column; gap: 1rem; }
+            .event-info-container { grid-template-columns: 1fr; }
+            .hero { padding: 4rem 0; }
+            
+            nav ul { gap: 1rem; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-cube"></i> BloxNews
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#roblox-updates">Atualizações Gerais</a></li>
+                    <li><a href="#brainrot-events">Roube um Brainrot</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>O Futuro do <span>Roblox</span>: 2025 e 2026</h1>
+            <p>
+                O Roblox está em constante atualização, com mudanças significativas acontecendo ao longo de 2025 e grandes previsões para 2026. Fique por dentro das novas funcionalidades de IA, privacidade e impactos legais.
+            </p>
+            <a href="#roblox-updates" class="hero-btn">Ver Novidades</a>
+        </div>
+    </section>
+
+    <!-- Seção: Atualizações Roblox -->
+    <main>
+        <section id="roblox-updates" class="container">
+            <h2><i class="fas fa-bolt"></i> Principais Atualizações</h2>
+            <p style="margin-bottom: 2rem;">As atualizações chegam gradualmente, com foco em melhorias no chat, na criação de conteúdo e na experiência geral do usuário.</p>
+            
+            <div class="grid-cards">
+                <!-- Card IA -->
+                <article class="card">
+                    <span class="date-badge">2025</span>
+                    <div class="card-icon"><i class="fas fa-brain"></i></div>
+                    <h3>IA para Avatares</h3>
+                    <p>Prevista para 2025, permitirá criar skins utilizando fotos ou descrições de texto, revolucionando a personalização.</p>
+                </article>
+
+                <!-- Card Amigos -->
+                <article class="card">
+                    <span class="date-badge">Jan 2025</span>
+                    <div class="card-icon"><i class="fas fa-user-group"></i></div>
+                    <h3>Limites de Amigos</h3>
+                    <p>Após anos de pedidos dos jogadores, o limite foi aumentado para <strong>1000 amigos</strong> em janeiro de 2025.</p>
+                </article>
+
+                <!-- Card Interface -->
+                <article class="card">
+                    <span class="date-badge">2025</span>
+                    <div class="card-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Mudanças na Interface</h3>
+                    <p>O botão "Play" e compra mudaram de verde para azul, e a logo foi atualizada, gerando reações mistas na comunidade.</p>
+                </article>
+
+                <!-- Card Privacidade -->
+                <article class="card">
+                    <span class="date-badge">3º Trim 2025</span>
+                    <div class="card-icon"><i class="fas fa-shield-halved"></i></div>
+                    <h3>Privacidade</h3>
+                    <p>Novas configurações de visibilidade online eram esperadas para o terceiro trimestre de 2025 (julho-setembro).</p>
+                </article>
+
+                <!-- Card Pesquisa -->
+                <article class="card">
+                    <span class="date-badge">Meados 2025</span>
+                    <div class="card-icon"><i class="fas fa-magnifying-glass"></i></div>
+                    <h3>Retorno de Recursos</h3>
+                    <p>A pesquisa de jogos por gênero estava prevista para retornar, facilitando a descoberta de novos jogos.</p>
+                </article>
+
+                <!-- Card Legal -->
+                <article class="card legal-alert">
+                    <span class="date-badge">2026</span>
+                    <div class="card-icon"><i class="fas fa-scale-balanced"></i></div>
+                    <h3>Impacto Legal no Brasil</h3>
+                    <p>Uma nova lei brasileira pode afetar o Roblox, exigindo adaptações na plataforma para cumprir novas regulamentações.</p>
+                </article>
+            </div>
+
+            <!-- Guia de Atualização -->
+            <div class="update-guide">
+                <div class="update-guide-content">
+                    <h3><i class="fas fa-rotate"></i> Como Manter seu Roblox Atualizado</h3>
+                    <p>O Roblox não tem uma data única para todas as atualizações; elas são implementadas em fases ao longo do ano.</p>
+                    <div class="update-guide-steps">
+                        <div class="step-item"><i class="fas fa-mobile-screen"></i> App atualiza automaticamente</div>
+                        <div class="step-item"><i class="fas fa-power-off"></i> Reinicie o PC/App para forçar</div>
+                        <div class="step-item"><i class="fas fa-globe"></i> Baixe no site oficial se houver erro</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: Roube um Brainrot -->
+        <section id="brainrot-events">
+            <div class="container">
+                <h2><i class="fas fa-skull"></i> Agenda: Roube um Brainrot</h2>
+                <p>Organizado pelo criador <strong>Sammy (SpyderSammy)</strong>, os eventos oferecem recompensas raras em sessões de tempo limitado.</p>
+
+                <div class="event-info-container">
+                    <!-- Coluna Esquerda: Detalhes -->
+                    <div class="brainrot-details">
+                        <div class="schedule-box">
+                            <h3><i class="far fa-clock"></i> Horários Comuns</h3>
+                            <div class="schedule-row">
+                                <span class="schedule-day">Terças</span>
+                                <span>"Terça dos Tacos" (Geralmente 18h-19h30 BRT)</span>
+                            </div>
+                            <div class="schedule-row">
+                                <span class="schedule-day">Sábados</span>
+                                <span>Evento da Indonésia (Horário varia, pode ser manhã)</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h3><i class="fas fa-circle-info"></i> Como Funciona?</h3>
+                            <ul>
+                                <li style="margin-bottom: 0.5rem; color: var(--text-muted);"><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i> Eventos duram cerca de 30 minutos.</li>
+                                <li style="margin-bottom: 0.5rem; color: var(--text-muted);"><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i> Sammy gera itens especiais e Blocos da Sorte.</li>
+                                <li style="margin-bottom: 0.5rem; color: var(--text-muted);"><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i> Horários podem mudar sem aviso prévio.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Coluna Direita: Onde Verificar -->
+                    <div class="brainrot-sources">
+                        <h3>Onde verificar os horários:</h3>
+                        <p style="margin-bottom: 1.5rem;">Fique de olho nestes canais para saber o horário exato, pois eles são alterados frequentemente.</p>
+                        
+                        <div class="sources-list">
+                            <div class="source-item">
+                                <i class="fab fa-discord discord"></i>
+                                <div>
+                                    <strong>Discord Oficial</strong>
+                                    <p style="font-size: 0.85rem; margin:0;">Melhor lugar para anúncios em tempo real.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="source-item">
+                                <i class="fab fa-youtube youtube"></i>
+                                <div>
+                                    <strong>YouTube (Carlos Patatyy)</strong>
+                                    <p style="font-size: 0.85rem; margin:0;">Vídeos atualizados com novos horários.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="source-item">
+                                <i class="fas fa-book-open wiki"></i>
+                                <div>
+                                    <strong>Fandom Wiki</strong>
+                                    <p style="font-size: 0.85rem; margin:0;">Lista geral de eventos (ex: 3h da manhã EST).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 BloxNews Fan Page. Todos os direitos reservados.</p>
+            <p style="font-size: 0.8rem; opacity: 0.6;">Este site é um projeto de demonstração e não é afiliado oficialmente à Roblox Corporation ou ao criador de "Roube um Brainrot".</p>
+        </div>
+    </footer>
+
+</body>
+</html>
